@@ -7,7 +7,7 @@
         "start": "webpack serve --open --config ./webpack.config.js --env mode=dev",
         "build": "webpack --config ./webpack.config.js --env mode=prod",
         "predeploy": "npm run build",
-        "deploy": "gh-pages -d dist -e migration-to-typescript",
+        "deploy": "gh-pages -d dist",
         "lint": "eslint . --ext .ts"
     },
     "repository": {
