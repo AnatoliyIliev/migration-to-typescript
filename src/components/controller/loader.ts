@@ -39,7 +39,7 @@ class Loader {
     private load<T>(method: string, endpoint: string, callback: Callback<T>, options: Options = {}) {
         fetch(this.makeUrl(options, endpoint), { method })
             .then(this.errorHandler)
-            .then((res) => res.json())
+            .then((res: Response) => res.json())
             .then((data: T) => callback(data))
             .catch((err: Error) => console.error(err));
     }
